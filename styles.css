@@ -1,0 +1,68 @@
+/* Video de fondo */  
+#background-video {  
+  position: fixed;  
+  top: 0;  
+  left: 0;  
+  width: 100%;  
+  height: 100%;  
+  object-fit: cover; /* Asegura que el video cubra todo el fondo */  
+  opacity: 0.3; /* Ajusta la opacidad del video */  
+  z-index: -1; /* Coloca el video detrás del contenido */  
+}  
+
+/* Mantén el resto del diseño igual */  
+body {  
+  margin: 0;  
+  padding: 0;  
+  display: flex;  
+  flex-direction: column;  
+  justify-content: center;  
+  align-items: center;  
+  height: 100vh;  
+  width: 100vw;  
+  background-color: #2d4b3a; /* Fondo verde oscuro (de respaldo si el video no carga) */  
+  color: #fff;  
+  font-family: 'Inter', sans-serif;  
+}  
+
+header img.logo {   
+  height: auto;  
+  margin-bottom: 40px;  
+}  
+
+.menu-container {  
+  display: flex;  
+  flex-direction: column;  
+  gap: 30px;  
+  width: 80%;  
+  align-items: center;  
+}  
+
+.fun-button {  
+  background-color: #fff; /* Fondo blanco */  
+  color: #000; /* Texto negro */  
+  border: none;  
+  border-radius: 50px;  
+  padding: 25px 50px;  
+  font-size: 2.8rem;  
+  font-weight: 800; /* Fuente en bold */  
+  text-decoration: none;  
+  text-align: center;  
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra ligera */  
+  transition: transform 0.3s ease, box-shadow 0.3s ease;  
+  width: 100%; /* Botones ocupan todo el ancho */  
+}  
+
+.fun-button:hover {  
+  transform: scale(1.05); /* Efecto de agrandamiento */  
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Sombra más intensa */  
+}  
+
+footer {  
+  position: absolute;  
+  bottom: 20px;  
+  text-align: center;  
+  width: 100%;  
+  font-size: 1.2rem;  
+  color: #ccc;  
+}

@@ -1,0 +1,48 @@
+  body {  
+    margin: 0;  
+    padding: 0;  
+    display: flex;  
+    flex-direction: column;  
+    justify-content: center;  
+    align-items: center;  
+    height: 100vh;  
+    width: 100vw;  
+    background-color: black;  
+    font-family: 'Inter', sans-serif;  
+  }  
+  
+  /* Imagen a pantalla completa */  
+  .full-image {  
+    width: 100%;  
+    height: 100%;  
+    object-fit: cover;  
+    background-color: transparent;
+  }  
+  
+  /* Botón de volver */  
+  .button-container {  
+    position: absolute;  
+    bottom: 40px;  
+    text-align: center; 
+    margin-bottom: 190px; 
+  }  
+  
+  .fun-button {  
+    background-color: #fff; /* Fondo blanco */  
+    font-family: 'Inter', sans-serif;  
+    color: #000; /* Texto negro */  
+    border: none;  
+    border-radius: 50px;  
+    padding: 20px 40px;  
+    font-size: 2.5rem;  
+    font-weight: 800; /* Fuente en bold */  
+    text-decoration: none;  
+    text-align: center;  
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra ligera */  
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  
+  }  
+  
+  .fun-button:hover {  
+    transform: scale(1.05); /* Efecto de agrandamiento */  
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Sombra más intensa */  
+  }

@@ -1,0 +1,145 @@
+/* ============================================== */
+/* === ESTILOS BASE (PARA EL TÓTEM 9:16) === */
+/* ============================================== */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Inter', sans-serif;
+    background-color: #2d4b3a;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.carousel {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Botones flotantes optimizados para el tótem */
+.day-buttons {
+    position: absolute;
+    top: 180px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+    z-index: 10;
+}
+
+.day-buttons button {
+    background-color: #fff;
+    color: #000;
+    font-family: 'Inter', sans-serif;  
+    border: none;
+    border-radius: 30px;
+    /* Tamaño grande para el tótem */
+    padding: 15px 30px; 
+    font-size: 1.5rem;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, background-color 0.2s, color 0.2s;
+    flex-shrink: 0;
+}
+
+.day-buttons button.active {
+    background-color: #2d4b3a;
+    color: #fff;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
+}
+
+.carousel-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: calc(100% * 2);
+    height: 100%;
+}
+
+.carousel-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+    background-color: #000;
+}
+
+.button-container {  
+    position: absolute;  
+    /* Posición alta para el tótem */
+    bottom: 15vh;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}  
+
+.fun-button {  
+    display: block;
+    background-color: #fff;
+    font-family: 'Inter', sans-serif;  
+    color: #000;
+    border: none;  
+    border-radius: 50px;
+    /* Tamaño de fuente grande para el tótem */
+    padding: 20px 50px;  
+    font-size: 2rem;  
+    font-weight: 800;
+    text-decoration: none;  
+    text-align: center;  
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;  
+}
+
+.fun-button:active {
+    transform: scale(0.95);
+}
+
+/* =================================================================== */
+/* === MEDIA QUERY PARA HACERLO RESPONSIVO EN MÓVILES === */
+/* =================================================================== */
+
+/* Estos estilos se aplicarán SOLO en pantallas con un ancho MÁXIMO de 768px (móviles) */
+@media (max-width: 768px) {
+
+    /* Hacemos los botones de los días más pequeños para que quepan en la pantalla del móvil */
+    .day-buttons button {
+        font-size: 1rem;      /* Reducimos la fuente */
+        padding: 10px 20px;   /* Reducimos el relleno */
+        border-radius: 20px;  /* Reducimos el redondeo */
+    }
+
+    .day-buttons {
+        gap: 10px; /* Reducimos el espacio entre los botones */
+    }
+
+    /* Hacemos el botón "Volver" mucho más pequeño y lo bajamos un poco */
+    .fun-button {
+        font-size: 1.2rem;    /* Fuente significativamente más pequeña */
+        padding: 15px 30px;   /* Relleno más pequeño */
+    }
+
+    /* Bajamos el botón "Volver" para que no ocupe tanto espacio en la pantalla del móvil */
+    .button-container {
+        bottom: 5vh;
+    }
+}
