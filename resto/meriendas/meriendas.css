@@ -1,0 +1,64 @@
+/* Estilo general optimizado para Tótem */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Inter', sans-serif;
+    background-color: #000; /* Fondo negro por si la imagen tarda en cargar */
+    overflow: hidden; /* Evita cualquier scroll */
+    
+    /* Mejoras para experiencia táctil de kiosco */
+    -webkit-user-select: none; /* Safari/Chrome */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Estándar */
+    -webkit-tap-highlight-color: transparent; /* Elimina el destello al tocar */
+}
+
+/* Contenedor para la imagen estática */
+.static-image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Se asegura que esté detrás del botón */
+}
+
+.static-image-container img {
+    width: 100%;
+    height: 100%;
+    /* 'cover' asegura que la imagen llene la pantalla 9:16 sin distorsión */
+    object-fit: cover; 
+}
+
+/* Botón de volver (optimizado para táctil) */
+.button-container {  
+    position: absolute;  
+    bottom: 10.5vh; /* Posicionamiento relativo a la altura de la pantalla */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10; /* Se asegura que esté por encima de la imagen */
+}  
+
+.fun-button {  
+    display: block;
+    background-color: #fff;
+    font-family: 'Inter', sans-serif;  
+    color: #000;
+    border: none;  
+    border-radius: 50px;
+    padding: 20px 50px;  
+    font-size: 2rem;  
+    font-weight: 800;
+    text-decoration: none;  
+    text-align: center;  
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;  
+}
+
+/* Feedback visual al tocar el botón */
+.fun-button:active {
+    transform: scale(0.95);
+}
